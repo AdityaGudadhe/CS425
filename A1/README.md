@@ -167,11 +167,11 @@ to be performed in each function which used these shared resources.
     Aryan Bharadwaj (210200) : Authentication, major Error Handling logic, command functions, function routing based on commands, documentation.
 
 # 9. Sources:
-    1. [TCP server logic](https://medium.com/@tharunappu2004/creating-a-simple-tcp-server-in-c-using-winsock-b75dde86dd39)
+[TCP server logic](https://medium.com/@tharunappu2004/creating-a-simple-tcp-server-in-c-using-winsock-b75dde86dd39)
     
-    2. [MultiThreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
+[MultiThreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
 
-    3. [C++ Reference](https://en.cppreference.com/w/)
+[C++ Reference](https://en.cppreference.com/w/)
 
 # 10. Declaration:
 
