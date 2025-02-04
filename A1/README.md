@@ -1,4 +1,4 @@
-# 1. Assignment Features
+# 1. Assignment Features:
 
 ## Implemented Features:
 
@@ -30,7 +30,7 @@
 
     Features like persistence storage which will store data even after disconnection of server/client could have been implemented
 
-# 2. Design Decisions
+# 2. Design Decisions:
 
     Each client connection is handled on a separate thread to allow concurrent interactions. This is done rather than generating a new process altogether.
 
@@ -51,7 +51,7 @@
     Most of the functional routing based on the commands is done by a single function handleCommandRouting which just uses a switch statement based on 
     the various commands.
 
-# 3. Design Trade-offs and Rationale
+# 3. Some Design Rationale: 
 
 Shared storage elements like sockets map, groups map and the commands map which every thread is using needed to be protected so 
 
@@ -67,7 +67,7 @@ to be performed in each function which used these shared resources.
 
 ## High-Level Design:
 
-###    Important Functions
+###    Important Functions:
 
         handle_client(int client_fd): Handles authentication and continuous message processing.
 
@@ -91,7 +91,7 @@ to be performed in each function which used these shared resources.
     
     All these functions and more are explained in detail in the code.
 
-###     Code Flow
+###     Code Flow:
 
         1. A client connects to the server from the main function which accept all the incoming connections and creates a new thread for them.
 
@@ -105,8 +105,10 @@ to be performed in each function which used these shared resources.
 
         6. When a client disconnects, disconnect is called to remove them from active structures.
 
+        Please refer to the "code flow" image attached.
 
-# 5. Testing Strategy
+
+# 5. Testing Strategy:
 
 ## Correctness Testing:
 
@@ -130,7 +132,7 @@ to be performed in each function which used these shared resources.
 
     Tested rapid client disconnections.
 
-# 6. Server Restrictions
+# 6. Server Restrictions:
 
     Max Clients: Limited by system resources and threading constraints.
 
@@ -140,7 +142,7 @@ to be performed in each function which used these shared resources.
 
     Max Message Size: Defined by BUFFER_SIZE (e.g., 1024 bytes per message).
 
-# 7. Challenges Faced
+# 7. Challenges Faced:
 
 ## Thread Safety Issues:
 
@@ -158,11 +160,24 @@ to be performed in each function which used these shared resources.
 
     Efficient string manipulation and its error handling, ensuring minimal processing overhead while sending direct messages, group messages, and broadcasts.
 
-# 8. Declaration
+# 8. Individual Contributors:
+
+    Aditya Gudadhe (210397) : Server Architecture, TCP server logic, multithreading and race condition handling, testing.
+
+    Aryan Bharadwaj (210200) : Authentication, major Error Handling logic, command functions, function routing based on commands, documentation.
+
+# 9. Sources:
+    1. [TCP server logic](https://medium.com/@tharunappu2004/creating-a-simple-tcp-server-in-c-using-winsock-b75dde86dd39)
+    
+    2. [MultiThreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
+
+    3. [C++ Reference](https://en.cppreference.com/w/)
+
+# 10. Declaration:
 
     We hereby declare that this project was completed independently and without any unauthorized collaboration or plagiarism.
 
-# 9. Feedback
+# 11. Feedback:
 
     The assignment was well-structured, allowing for learning about multi-threaded network programming.
 
