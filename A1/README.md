@@ -1,3 +1,23 @@
+# Assignment 1
+
+## Contributors: Aditya Gudadhe (210397)  Aryan Bharadwaj (210200)
+
+# How to run this code:
+1. cd into the directory.
+2. Run the following command for compiling the entire code and running the server_grp file (PORT is what you will specify):
+
+```
+make && ./server_grp "PORT"
+
+```
+3. Then run client code (most probably on multiple terminals) by using command:
+
+```
+./client_grp
+
+```
+
+
 # 1. Assignment Features:
 
 ## Implemented Features:
