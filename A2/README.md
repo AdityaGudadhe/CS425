@@ -24,7 +24,7 @@ pip install dnspython
 ## How to Run
 Execute the script using the following syntax:
 ```sh
-python3 dns_server.py <mode> <domain>
+python3 dnsresolver.py <mode> <domain>
 ```
 Where:
 - `<mode>` is either `iterative` or `recursive`.
@@ -33,7 +33,7 @@ Where:
 ### Example Usage
 #### Iterative Lookup
 ```sh
-python3 dns_server.py iterative example.com
+python3 dnsresolver.py iterative example.com
 ```
 Output:
 ```
@@ -49,7 +49,7 @@ Time taken: 1.234 seconds
 
 #### Recursive Lookup
 ```sh
-python3 dns_server.py recursive example.com
+python3 dnsresolver.py recursive example.com
 ```
 Output:
 ```
